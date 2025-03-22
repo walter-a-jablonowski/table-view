@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="table-view/styles.css?v=<?= time() ?>">
   <!-- Bootstrap Compatibility Layer -->
   <link rel="stylesheet" href="table-view/bootstrap-compat.css?v=<?= time() ?>">
-  <link rel="stylesheet" href="styles_bs.css?v=<?= time() ?>">
+  <link rel="stylesheet" href="styles/styles_bs.css?v=<?= time() ?>">
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
