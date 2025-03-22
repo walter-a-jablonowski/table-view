@@ -85,7 +85,7 @@
             <h5 class="m-0">Record Details</h5>
             <button class="detail-close btn-close"></button>
           </div>
-          <div class="detail-content"></div>
+          <div class="detail-content" style="overflow-y: auto; max-height: calc(100vh - 150px);"></div>
         </div>
       </div>
     </div>
