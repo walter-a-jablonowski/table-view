@@ -2,6 +2,14 @@
 
 Made with AI
 
+| File/Directory | Description |
+|----------------|-------------|
+| `ai.md`        | Initial prompt |
+| `index.php`    | Standard demo |
+| `index_bs.php` | Bootstrap-compatible demo |
+| `ajax/`        | AJAX impl |
+| `data/`        | Sample data files |
+| `table-view/`  | Table view component |
 
 ## License
 
