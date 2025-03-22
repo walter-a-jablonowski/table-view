@@ -67,24 +67,31 @@ function parseCsvFile( $filePath ) {
 }
 
 /**
- * Parse TSV file (with 2 spaces as separator)
+ * Parse TSV file (with at least 2 spaces as separator)
  * @param string $filePath Path to the TSV file
  * @return array Parsed data as an array of records
  */
 function parseTsvFile( $filePath ) {
   $data = [];
   $headers = [];
-  $separator = "  "; // Two spaces as separator
   
   if( ( $handle = fopen($filePath, "r") ) !== false ) {
     // Read headers
     if( ( $line = fgets($handle) ) !== false ) {
-      $headers = explode($separator, trim($line));
+      // Split by 2 or more spaces
+      $headers = preg_split('/\s{2,}/', trim($line));
+      
+      // Trim each header to remove any extra spaces
+      $headers = array_map('trim', $headers);
     }
     
     // Read data rows
     while( ( $line = fgets($handle) ) !== false ) {
-      $row = explode($separator, trim($line));
+      // Split by 2 or more spaces
+      $row = preg_split('/\s{2,}/', trim($line));
+      
+      // Trim each value to remove any extra spaces
+      $row = array_map('trim', $row);
       
       if( count($row) == count($headers) ) {
         $record = [];

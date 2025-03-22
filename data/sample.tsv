@@ -1,11 +1,11 @@
-ID  Name  Email  Phone  Country  Department  Salary
-101  Robert Williams  robert.w@example.com  +1-555-222-3333  USA  Engineering  85000
-102  Sarah Johnson  sarah.j@example.com  +1-555-444-5555  Canada  Marketing  72000
-103  David Chen  david.c@example.com  +44-20-8765-4321  UK  Finance  95000
-104  Olivia Brown  olivia.b@example.com  +61-2-1234-5678  Australia  HR  68000
-105  Carlos Rodriguez  carlos.r@example.com  +34-91-987-6543  Spain  Sales  78000
-106  Lena Schmidt  lena.s@example.com  +49-30-8765-4321  Germany  IT  92000
-107  Takashi Yamamoto  takashi.y@example.com  +81-3-8765-4321  Japan  Research  88000
-108  Fernanda Lima  fernanda.l@example.com  +55-11-8765-4321  Brazil  Marketing  65000
-109  Omar Farouk  omar.f@example.com  +20-2-8765-4321  Egypt  Engineering  70000
-110  Claire Martin  claire.m@example.com  +33-1-8765-4321  France  Legal  82000
+ID    Name              Email                   Phone             Country    Department    Salary
+101   Robert Williams   robert.w@example.com    +1-555-222-3333   USA        Engineering   85000
+102   Sarah Johnson     sarah.j@example.com     +1-555-444-5555   Canada     Marketing     72000
+103   David Chen        david.c@example.com     +44-20-8765-4321  UK         Finance       95000
+104   Olivia Brown      olivia.b@example.com    +61-2-1234-5678   Australia  HR            68000
+105   Carlos Rodriguez  carlos.r@example.com    +34-91-987-6543   Spain      Sales         78000
+106   Lena Schmidt      lena.s@example.com      +49-30-8765-4321  Germany    IT            92000
+107   Takashi Yamamoto  takashi.y@example.com   +81-3-8765-4321   Japan      Research      88000
+108   Fernanda Lima     fernanda.l@example.com  +55-11-8765-4321  Brazil     Marketing     65000
+109   Omar Farouk       omar.f@example.com      +20-2-8765-4321   Spain      Engineering   70000
+110   Claire Martin     claire.m@example.com    +33-1-8765-4321   France     Legal         82000
