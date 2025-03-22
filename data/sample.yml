@@ -1,0 +1,79 @@
+product1:
+  ID: 301
+  Name: "Premium Laptop"
+  Category: "Electronics"
+  Price: 1299.99
+  Stock: 45
+  Manufacturer: "TechCorp"
+  ReleaseDate: "2023-01-15"
+  Rating: 4.7
+
+product2:
+  ID: 302
+  Name: "Wireless Headphones"
+  Category: "Audio"
+  Price: 199.99
+  Stock: 120
+  Manufacturer: "SoundWave"
+  ReleaseDate: "2022-11-30"
+  Rating: 4.5
+
+product3:
+  ID: 303
+  Name: "Smart Watch"
+  Category: "Wearables"
+  Price: 249.99
+  Stock: 78
+  Manufacturer: "FitTech"
+  ReleaseDate: "2023-03-10"
+  Rating: 4.2
+
+product4:
+  ID: 304
+  Name: "Wireless Keyboard"
+  Category: "Accessories"
+  Price: 89.99
+  Stock: 200
+  Manufacturer: "InputPro"
+  ReleaseDate: "2022-08-22"
+  Rating: 4.4
+
+product5:
+  ID: 305
+  Name: "4K Monitor"
+  Category: "Displays"
+  Price: 349.99
+  Stock: 35
+  Manufacturer: "ViewTech"
+  ReleaseDate: "2023-02-05"
+  Rating: 4.6
+
+product6:
+  ID: 306
+  Name: "External SSD"
+  Category: "Storage"
+  Price: 129.99
+  Stock: 150
+  Manufacturer: "DataStore"
+  ReleaseDate: "2022-12-18"
+  Rating: 4.8
+
+product7:
+  ID: 307
+  Name: "Gaming Mouse"
+  Category: "Accessories"
+  Price: 69.99
+  Stock: 180
+  Manufacturer: "GameGear"
+  ReleaseDate: "2023-01-28"
+  Rating: 4.3
+
+product8:
+  ID: 308
+  Name: "Bluetooth Speaker"
+  Category: "Audio"
+  Price: 79.99
+  Stock: 95
+  Manufacturer: "SoundWave"
+  ReleaseDate: "2022-10-15"
+  Rating: 4.1

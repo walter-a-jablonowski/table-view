@@ -1,0 +1,9 @@
+{
+  "name": "table-view/component",
+  "description": "Table View Component with support for various data formats",
+  "type": "project",
+  "require": {
+    "php": ">=7.2",
+    "symfony/yaml": "^5.4"
+  }
+}

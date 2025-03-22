@@ -1,0 +1,11 @@
+ID,Name,Email,Phone,Country,Age
+1,John Doe,john.doe@example.com,+1-555-123-4567,USA,32
+2,Jane Smith,jane.smith@example.com,+1-555-987-6543,Canada,28
+3,Michael Johnson,michael.j@example.com,+44-20-1234-5678,UK,45
+4,Emma Wilson,emma.w@example.com,+61-2-9876-5432,Australia,36
+5,Luis Garcia,luis.g@example.com,+34-91-123-4567,Spain,41
+6,Anna Müller,anna.m@example.com,+49-30-1234-5678,Germany,29
+7,Hiroshi Tanaka,hiroshi.t@example.com,+81-3-1234-5678,Japan,38
+8,Maria Silva,maria.s@example.com,+55-11-1234-5678,Brazil,33
+9,Ahmed Hassan,ahmed.h@example.com,+20-2-1234-5678,Egypt,27
+10,Sophie Dubois,sophie.d@example.com,+33-1-1234-5678,France,31
