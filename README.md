@@ -2,11 +2,15 @@
 
 Made with AI
 
+```php
+composer install
+```
+
 | File/Directory | Description |
 |----------------|-------------|
 | `ai.md`        | Initial prompt |
 | `index.php`    | Standard demo |
-| `index_bs.php` | Bootstrap-compatible demo |
+| `index_bs.php` | BS-compatible demo |
 | `ajax/`        | AJAX impl |
 | `data/`        | Sample data files |
 | `table-view/`  | Table view component |
