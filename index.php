@@ -13,9 +13,9 @@
 <body>
   <header>
     <div class="header-content">
-      <div class="title">Table View Component</div>
+      <div>Table View Component</div>
       <div class="nav-links">
-        <a href="index_bs.php" class="bs-demo-link">Bootstrap Demo</a>
+        <a href="index_bs.php" class="bs-demo-link">BS Demo</a>
       </div>
     </div>
   </header>
