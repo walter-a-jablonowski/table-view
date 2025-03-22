@@ -7,14 +7,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Table View Component - Bootstrap Demo</title>
-  <!-- Bootstrap 5.3 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Table View Component CSS -->
   <link rel="stylesheet" href="table-view/styles.css?v=<?= time() ?>">
   <!-- Bootstrap Compatibility Layer -->
   <link rel="stylesheet" href="table-view/bootstrap-compat.css?v=<?= time() ?>">
-  <!-- Bootstrap Demo Styles -->
-  <link rel="stylesheet" href="bootstrap-demo-styles.css?v=<?= time() ?>">
+  <link rel="stylesheet" href="styles_bs.css?v=<?= time() ?>">
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
@@ -91,12 +88,9 @@
     </div>
   </div>
 
-  <!-- Bootstrap 5.3 JS Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- Table View Component JS -->
   <script src="table-view/detail.js?v=<?= time() ?>"></script>
   <script src="table-view/table.js?v=<?= time() ?>"></script>
-  <!-- Bootstrap Demo Controller -->
-  <script src="bootstrap-controller.js?v=<?= time() ?>"></script>
+  <script src="controller_bs.js?v=<?= time() ?>"></script>
 </body>
 </html>
