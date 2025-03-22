@@ -1,6 +1,10 @@
 
 (all from prompt seen)
 
+- /ajax is outside intentionally (cause undividual loading)
+- filter styles are in demo styles intentionally
+
+- load more button is outside control in html an styles (move inside)
 - fix tsv format
 - minor changes like improve fetch call, ui, ...
 
