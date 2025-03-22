@@ -52,17 +52,15 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Handle responsive behavior
   window.addEventListener('resize', function() {
-    if( window.innerWidth <= 576 ) {
-      // Mobile view - detail view as overlay
+    // if( window.innerWidth <= 576 )  // TASK: original for non BS was, changed to rm one controller
+    if( window.innerWidth <= 767.98 )  // mobile view - detail view as overlay
       document.querySelector('.detail-container').classList.add('mobile-view');
-    } else {
-      // Desktop view - detail view at the side
+    else  // desktop view - detail view at the side
       document.querySelector('.detail-container').classList.remove('mobile-view');
-    }
   });
   
   // Initial check for responsive layout
-  if( window.innerWidth <= 576 ) {
+  // if( window.innerWidth <= 576 )
+  if( window.innerWidth <= 767.98 )
     document.querySelector('.detail-container').classList.add('mobile-view');
-  }
 });
