@@ -21,12 +21,12 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="navbar-nav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
             <a class="nav-link" href="index.php">Standard Demo</a>
           </li>
-          <li class="navbar-nav">
-            <a class="nav-link active" href="bootstrap-demo.php">Bootstrap Demo</a>
+          <li class="nav-item">
+            <a class="nav-link active" href="index_bs.php">Bootstrap Demo</a>
           </li>
         </ul>
       </div>

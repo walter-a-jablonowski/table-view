@@ -12,7 +12,12 @@
 </head>
 <body>
   <header>
-    Table View Component
+    <div class="header-content">
+      <div class="title">Table View Component</div>
+      <div class="nav-links">
+        <a href="index_bs.php" class="bs-demo-link">Bootstrap Demo</a>
+      </div>
+    </div>
   </header>
   
   <div class="container">
