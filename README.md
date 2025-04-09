@@ -18,17 +18,17 @@ composer install
 ## Debug
 
 ```
+index_style.php?source=data/sample.csv
 index.php?source=data/sample.csv
-index_bs.php?source=data/sample.csv
 
+index_style.php?source=data/sample.json
 index.php?source=data/sample.json
-index_bs.php?source=data/sample.json
 
+index_style.php?source=data/sample.tsv
 index.php?source=data/sample.tsv
-index_bs.php?source=data/sample.tsv
 
+index_style.php?source=data/sample.yml
 index.php?source=data/sample.yml
-index_bs.php?source=data/sample.yml
 ```
 
 ## License
