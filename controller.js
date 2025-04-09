@@ -15,15 +15,26 @@ document.addEventListener('DOMContentLoaded', function() {
   // Connect table view with detail view
   tableView.setDetailView(detailView);
   
-  // Handle data source selection
-  document.getElementById('load-data-btn').addEventListener('click', function() {
-    const dataSource = document.getElementById('data-source').value;
-    tableView.loadData(dataSource);
-  });
+  // Get data source from URL parameter
+  function getDataSourceFromUrl() {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get('source');
+  }
   
-  // Load initial data if data sources are available
-  if( document.getElementById('data-source').options.length > 0 ) {
-    tableView.loadData(document.getElementById('data-source').value);
+  // Load data based on URL parameter
+  const dataSource = getDataSourceFromUrl();
+  if( dataSource ) {
+    tableView.loadData(dataSource);
+  } else {
+    // Default to first data file if no parameter is provided
+    fetch('ajax.php?action=getDefaultSource')
+      .then(response => response.json())
+      .then(data => {
+        if( data.source ) {
+          tableView.loadData(data.source);
+        }
+      })
+      .catch(error => console.error('Error loading default data source:', error));
   }
   
   // Setup filter button

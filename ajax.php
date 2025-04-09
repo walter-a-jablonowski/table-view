@@ -27,6 +27,10 @@ switch( $action ) {
     require_once 'ajax/sort.php';
     break;
     
+  case 'getDefaultSource':
+    require_once 'ajax/default_source.php';
+    break;
+    
   default:
     header('HTTP/1.1 400 Bad Request');
     echo json_encode(['error' => 'Invalid action']);

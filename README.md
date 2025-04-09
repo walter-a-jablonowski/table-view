@@ -15,6 +15,22 @@ composer install
 | `/data`        | Sample data files |
 | `/table-view`  | Table view component |
 
+## Debug
+
+```
+index.php?source=data/sample.csv
+index_bs.php?source=data/sample.csv
+
+index.php?source=data/sample.json
+index_bs.php?source=data/sample.json
+
+index.php?source=data/sample.tsv
+index_bs.php?source=data/sample.tsv
+
+index.php?source=data/sample.yml
+index_bs.php?source=data/sample.yml
+```
+
 ## License
 
 Copyright (C) Walter A. Jablonowski 2025, free under [MIT license](LICENSE)

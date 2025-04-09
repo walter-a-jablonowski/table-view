@@ -19,22 +19,6 @@
   
   <div class="container">
     <div class="table-section">
-      <div class="data-source-selector">
-        <label for="data-source">Select Data Source:</label>
-        <select id="data-source">
-          <?php
-          foreach( scandir('data') as $file ) :
-            if( $file != '.' && $file != '..' && in_array( pathinfo($file, PATHINFO_EXTENSION), ['csv', 'tsv', 'json', 'yml']) ):
-          ?>
-              <option value="data/<?= $file ?>"><?= ucfirst( pathinfo($file, PATHINFO_EXTENSION)) ?> Example: <?= $file ?></option>
-          <?php
-            endif;
-          endforeach;
-          ?>
-        </select>
-        <button id="load-data-btn">Load Data</button>
-      </div>
-      
       <div class="filter-container">
         <input type="text" id="filter-input" placeholder="Filter data...">
         <button id="filter-button">Filter</button>

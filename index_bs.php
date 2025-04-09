@@ -32,25 +32,6 @@
       <div class="col-md-8 col-lg-9 table-section">
         <div class="card h-100">
           <div class="card-header">
-            <div class="row mb-3">
-              <div class="col-md-12">
-                <label for="data-source" class="form-label">Select Data Source:</label>
-                <div class="input-group">
-                  <select id="data-source" class="form-select">
-                    <?php
-                    foreach( scandir('data') as $file ):
-                      if( $file != '.' && $file != '..' && in_array( pathinfo($file, PATHINFO_EXTENSION), ['csv', 'tsv', 'json', 'yml'])):
-                    ?>
-                        <option value="data/<?= $file ?>"><?= ucfirst( pathinfo($file, PATHINFO_EXTENSION)) ?> Example: <?= $file ?></option>
-                    <?php
-                      endif;
-                    endforeach;
-                    ?>
-                  </select>
-                  <button id="load-data-btn" class="btn btn-primary">Load Data</button>
-                </div>
-              </div>
-            </div>
             <div class="row">
               <div class="col-md-12">
                 <div class="input-group">
