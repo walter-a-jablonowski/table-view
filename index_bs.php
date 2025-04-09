@@ -38,11 +38,10 @@
                 <div class="input-group">
                   <select id="data-source" class="form-select">
                     <?php
-                    $dataFiles = scandir('data');
-                    foreach( $dataFiles as $file ) :
-                      if( $file != '.' && $file != '..' && in_array(pathinfo($file, PATHINFO_EXTENSION), ['csv', 'tsv', 'json', 'yml']) ) :
+                    foreach( scandir('data') as $file ):
+                      if( $file != '.' && $file != '..' && in_array( pathinfo($file, PATHINFO_EXTENSION), ['csv', 'tsv', 'json', 'yml'])):
                     ?>
-                        <option value="data/<?= $file ?>"><?= ucfirst(pathinfo($file, PATHINFO_EXTENSION)) ?> Example: <?= $file ?></option>
+                        <option value="data/<?= $file ?>"><?= ucfirst( pathinfo($file, PATHINFO_EXTENSION)) ?> Example: <?= $file ?></option>
                     <?php
                       endif;
                     endforeach;

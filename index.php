@@ -1,6 +1,3 @@
-<?php
-// Table View Component - Main Page
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,11 +23,10 @@
         <label for="data-source">Select Data Source:</label>
         <select id="data-source">
           <?php
-          $dataFiles = scandir('data');
-          foreach( $dataFiles as $file ) :
-            if( $file != '.' && $file != '..' && in_array(pathinfo($file, PATHINFO_EXTENSION), ['csv', 'tsv', 'json', 'yml']) ) :
+          foreach( scandir('data') as $file ) :
+            if( $file != '.' && $file != '..' && in_array( pathinfo($file, PATHINFO_EXTENSION), ['csv', 'tsv', 'json', 'yml']) ):
           ?>
-              <option value="data/<?= $file ?>"><?= ucfirst(pathinfo($file, PATHINFO_EXTENSION)) ?> Example: <?= $file ?></option>
+              <option value="data/<?= $file ?>"><?= ucfirst( pathinfo($file, PATHINFO_EXTENSION)) ?> Example: <?= $file ?></option>
           <?php
             endif;
           endforeach;
