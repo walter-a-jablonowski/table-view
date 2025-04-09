@@ -13,7 +13,7 @@
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Table View Component</a>
+      <a class="navbar-brand" href="#">Table View</a>
     </div>
   </nav>
 

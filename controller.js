@@ -21,10 +21,28 @@ document.addEventListener('DOMContentLoaded', function() {
     return urlParams.get('source');
   }
   
+  // Function to update header text with file name
+  function updateHeaderWithFileName(filePath) {
+    if( !filePath ) return;
+    
+    // Extract file name without path and extension
+    const fileName = filePath.split('/').pop().split('.')[0];
+    
+    // Capitalize first letter
+    const capitalizedFileName = fileName.charAt(0).toUpperCase() + fileName.slice(1);
+    
+    // Update header text
+    const headerElement = document.querySelector('.navbar-brand') || document.querySelector('.header-content > div');
+    if( headerElement ) {
+      headerElement.textContent = capitalizedFileName;
+    }
+  }
+  
   // Load data based on URL parameter
   const dataSource = getDataSourceFromUrl();
   if( dataSource ) {
     tableView.loadData(dataSource);
+    updateHeaderWithFileName(dataSource);
   } else {
     // Display error message when no source parameter is provided
     const tableContainer = document.getElementById('table-view');

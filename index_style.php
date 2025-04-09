@@ -10,7 +10,7 @@
 <body>
   <header>
     <div class="header-content">
-      <div>Table View Component</div>
+      <div>Table View</div>
     </div>
   </header>
   
