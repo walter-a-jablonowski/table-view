@@ -8,7 +8,7 @@ use Symfony\Component\Yaml\Yaml;
  * @return array Parsed data as an array of records
  */
 function parseDataFile( $filePath )
-
+{
   if( ! file_exists($filePath) )
     throw new Exception("File missing: $filePath");
   
@@ -205,7 +205,7 @@ function filterData( $data, $filterText )
  * @param string $direction Sort direction ('asc' or 'desc')
  * @return array Sorted data
  */
-function sortData( $data, $column, $direction = 'asc' )
+function sortData( $data, $column, $direction = 'asc')
 {
   if( empty($column) || empty($data))
     return $data;
