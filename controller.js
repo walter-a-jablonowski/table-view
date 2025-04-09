@@ -26,15 +26,13 @@ document.addEventListener('DOMContentLoaded', function() {
   if( dataSource ) {
     tableView.loadData(dataSource);
   } else {
-    // Default to first data file if no parameter is provided
-    fetch('ajax.php?action=getDefaultSource')
-      .then(response => response.json())
-      .then(data => {
-        if( data.source ) {
-          tableView.loadData(data.source);
-        }
-      })
-      .catch(error => console.error('Error loading default data source:', error));
+    // Display error message when no source parameter is provided
+    const tableContainer = document.getElementById('table-view');
+    tableContainer.innerHTML = '<div class="error-message">Error: No data source specified. Please add a source parameter to the URL.</div>';
+    
+    // Hide filter and load more elements as they're not needed
+    document.getElementById('filter-button').parentElement.style.display = 'none';
+    document.getElementById('load-more-button').style.display = 'none';
   }
   
   // Setup filter button

@@ -219,6 +219,18 @@ header p {
   padding: 1rem;
 }
 
+/* Error message styling */
+.error-message {
+  padding: 20px;
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+  border-radius: 4px;
+  margin: 20px 0;
+  text-align: center;
+  font-size: 16px;
+}
+
 /* Responsive breakpoints */
 /* Small devices (landscape phones, 576px and down) */
 @media (max-width: 576px) {
