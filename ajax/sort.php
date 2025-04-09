@@ -5,7 +5,7 @@
  */
 
 // Include helper functions
-require_once __DIR__ . '/helpers.php';
+require_once 'helpers.php';
 
 // Check if source parameter is provided
 if( ! isset($_GET['source']) ) 

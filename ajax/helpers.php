@@ -1,17 +1,16 @@
 <?php
-/**
- * Helper functions for Table View Component
- */
+
+use Symfony\Component\Yaml\Yaml;
 
 /**
  * Parse data from various file formats
  * @param string $filePath Path to the data file
  * @return array Parsed data as an array of records
  */
-function parseDataFile( $filePath ) {
-  if( ! file_exists($filePath) ) {
-    throw new Exception("File not found: $filePath");
-  }
+function parseDataFile( $filePath )
+
+  if( ! file_exists($filePath) )
+    throw new Exception("File missing: $filePath");
   
   $extension = strtolower(pathinfo($filePath, PATHINFO_EXTENSION));
   
@@ -39,18 +38,21 @@ function parseDataFile( $filePath ) {
  * @param string $filePath Path to the CSV file
  * @return array Parsed data as an array of records
  */
-function parseCsvFile( $filePath ) {
-  $data = [];
+function parseCsvFile( $filePath )
+{
+  $data    = [];
   $headers = [];
   
-  if( ( $handle = fopen($filePath, "r") ) !== false ) {
+  if( ( $handle = fopen($filePath, "r") ) !== false )
+  {
     // Read headers
     if( ( $row = fgetcsv($handle) ) !== false ) {
       $headers = $row;
     }
     
     // Read data rows
-    while( ( $row = fgetcsv($handle) ) !== false ) {
+    while( ( $row = fgetcsv($handle) ) !== false )
+    {
       if( count($row) == count($headers) ) {
         $record = [];
         foreach( $headers as $index => $header ) {
@@ -71,11 +73,13 @@ function parseCsvFile( $filePath ) {
  * @param string $filePath Path to the TSV file
  * @return array Parsed data as an array of records
  */
-function parseTsvFile( $filePath ) {
-  $data = [];
+function parseTsvFile( $filePath )
+{
+  $data    = [];
   $headers = [];
   
-  if( ( $handle = fopen($filePath, "r") ) !== false ) {
+  if( ( $handle = fopen($filePath, "r") ) !== false )
+  {
     // Read headers
     if( ( $line = fgets($handle) ) !== false ) {
       // Split by 2 or more spaces
@@ -113,28 +117,30 @@ function parseTsvFile( $filePath ) {
  * @param string $filePath Path to the JSON file
  * @return array Parsed data as an array of records
  */
-function parseJsonFile( $filePath ) {
+function parseJsonFile( $filePath )
+{
   $content = file_get_contents($filePath);
-  $data = json_decode($content, true);
+  $data    = json_decode($content, true);
   
-  if( json_last_error() !== JSON_ERROR_NONE ) {
+  if( json_last_error() !== JSON_ERROR_NONE )
     throw new Exception("Invalid JSON file: " . json_last_error_msg());
-  }
   
   // Handle string keys for records by adding an id field
+  
   $result = [];
   
-  // Check if data is an associative array (string keys)
-  if( array_keys($data) !== range(0, count($data) - 1) ) {
+  // check if data is an associative array (string keys)
+  if( array_keys($data) !== range(0, count($data) - 1))
+  {
     foreach( $data as $key => $value ) {
       if( is_array($value) ) {
         $value['id'] = $key;
         $result[] = $value;
       }
     }
-  } else {
-    $result = $data;
   }
+  else
+    $result = $data;
   
   return $result;
 }
@@ -144,34 +150,26 @@ function parseJsonFile( $filePath ) {
  * @param string $filePath Path to the YAML file
  * @return array Parsed data as an array of records
  */
-function parseYamlFile( $filePath ) {
-  // Check if Symfony YAML component is available
-  if( ! class_exists('Symfony\Component\Yaml\Yaml') ) {
-    // If not available, try to load it via Composer autoload
-    if( file_exists(__DIR__ . '/../vendor/autoload.php') ) {
-      require_once __DIR__ . '/../vendor/autoload.php';
-    } else {
-      throw new Exception("Symfony YAML component is required but not available. Please install it using Composer.");
-    }
-  }
-  
-  // Parse YAML file using Symfony component
-  $data = \Symfony\Component\Yaml\Yaml::parseFile($filePath);
+function parseYamlFile( $filePath )
+{
+  $data = Yaml::parseFile($filePath);
   
   // Handle string keys for records by adding an id field
+
   $result = [];
   
-  // Check if data is an associative array (string keys)
-  if( array_keys($data) !== range(0, count($data) - 1) ) {
+  // check if data is an associative array (string keys)
+  if( array_keys($data) !== range(0, count($data) - 1) )
+  {
     foreach( $data as $key => $value ) {
       if( is_array($value) ) {
         $value['id'] = $key;
         $result[] = $value;
       }
     }
-  } else {
-    $result = $data;
   }
+  else
+    $result = $data;
   
   return $result;
 }
@@ -182,7 +180,8 @@ function parseYamlFile( $filePath ) {
  * @param string $filterText Text to filter by
  * @return array Filtered data
  */
-function filterData( $data, $filterText ) {
+function filterData( $data, $filterText )
+{
   if( empty($filterText) ) {
     return $data;
   }
@@ -206,10 +205,10 @@ function filterData( $data, $filterText ) {
  * @param string $direction Sort direction ('asc' or 'desc')
  * @return array Sorted data
  */
-function sortData( $data, $column, $direction = 'asc' ) {
-  if( empty($column) || empty($data) ) {
+function sortData( $data, $column, $direction = 'asc' )
+{
+  if( empty($column) || empty($data))
     return $data;
-  }
   
   // Create a copy of the data to avoid modifying the original
   $sortedData = $data;

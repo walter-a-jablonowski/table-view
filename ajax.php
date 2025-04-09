@@ -1,10 +1,7 @@
 <?php
-/**
- * AJAX Handler for Table View Component
- * Routes AJAX requests to appropriate handlers
- */
 
-// Prevent direct access
+require_once 'vendor/autoload.php';
+
 if( ! isset($_GET['action']) ) {
   header('HTTP/1.1 400 Bad Request');
   echo json_encode(['error' => 'No action specified']);
