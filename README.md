@@ -9,8 +9,8 @@ composer install
 | File           | Description |
 |----------------|-------------|
 | `ai.md`        | Initial prompt |
-| `index.php`    | Standard demo |
-| `index_bs.php` | BS-compatible demo |
+| `index_style.php` | Standard demo |
+| `index.php`    | BS-compatible demo |
 | `/ajax`        | AJAX impl |
 | `/data`        | Sample data files |
 | `/table-view`  | Table view component |
