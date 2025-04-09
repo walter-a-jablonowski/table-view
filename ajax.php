@@ -15,6 +15,7 @@ if( ! isset($_GET['action']) ) {
 $action = $_GET['action'];
 
 switch( $action ) {
+
   case 'getData':
     require_once 'ajax/data.php';
     break;

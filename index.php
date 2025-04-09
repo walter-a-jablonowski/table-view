@@ -11,9 +11,6 @@
   <header>
     <div class="header-content">
       <div>Table View Component</div>
-      <div class="nav-links">
-        <a href="index_bs.php" class="bs-demo-link">BS Demo</a>
-      </div>
     </div>
   </header>
   
