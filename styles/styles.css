@@ -173,24 +173,6 @@ header p {
   overflow: auto;
 }
 
-/* Load more button */
-#load-more-button {
-  display: block;
-  width: 100%;
-  padding: 0.75rem;
-  background-color: var(--light-color);
-  border: 1px solid var(--border-color);
-  border-radius: 4px;
-  cursor: pointer;
-  text-align: center;
-  font-size: 1rem;
-  margin-top: auto; /* Push to bottom of flex container */
-}
-
-#load-more-button:hover {
-  background-color: #dde4e6;
-}
-
 /* Detail container - no padding or margins, right side */
 .detail-container {
   width: 300px;

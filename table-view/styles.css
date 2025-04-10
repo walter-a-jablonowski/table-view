@@ -183,6 +183,23 @@
   padding: 2rem 0;
 }
 
+/* Load more container */
+.load-more-container {
+  padding: 0.75rem;
+  background-color: var(--light-color);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 1rem;
+  display: block;
+  width: 100%;
+}
+
+.load-more-container:hover {
+  background-color: #dde4e6;
+}
+
 /* Responsive table styles */
 @media (max-width: 576px) {
   .table-row {

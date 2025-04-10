@@ -78,11 +78,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
   
-  // Setup load more button
-  document.getElementById('load-more-button').addEventListener('click', function() {
-    tableView.loadMore();
-  });
-  
   // Setup detail view close button
   document.querySelector('.detail-close').addEventListener('click', function() {
     detailView.hide();

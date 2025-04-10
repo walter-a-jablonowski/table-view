@@ -179,10 +179,19 @@ class TableView {
       this.tableContainer.appendChild(row);
     });
     
-    // Update load more button visibility
-    const loadMoreButton = document.getElementById('load-more-button');
-    if( loadMoreButton ) {
-      loadMoreButton.style.display = this.displayedData.length < this.filteredData.length ? 'block' : 'none';
+    // Add "Load More" button if there are more records to load
+    if( this.displayedData.length < this.filteredData.length ) {
+      const loadMoreRow = document.createElement('div');
+      loadMoreRow.className = 'load-more-container';
+      
+      const loadMoreButton = document.createElement('button');
+      loadMoreButton.id = 'load-more-button';
+      loadMoreButton.className = 'btn btn-light w-100 py-2';
+      loadMoreButton.textContent = 'Load More';
+      loadMoreButton.addEventListener('click', () => this.loadMore());
+      
+      loadMoreRow.appendChild(loadMoreButton);
+      this.tableContainer.appendChild(loadMoreRow);
     }
     
     // Make the table responsive

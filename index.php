@@ -33,9 +33,6 @@
           </div>
           <div class="card-body p-0 d-flex flex-column">
             <div id="table-view" class="table-container flex-grow-1"></div>
-            <div class="card-footer p-0">
-              <button id="load-more-button" class="btn btn-light w-100 py-2 rounded-0">Load More</button>
-            </div>
           </div>
         </div>
       </div>

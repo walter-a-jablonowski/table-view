@@ -22,7 +22,6 @@
       </div>
       
       <div id="table-view" class="table-container"></div>
-      <button id="load-more-button">Load More</button>
     </div>
     
     <div id="detail-view" class="detail-container">
