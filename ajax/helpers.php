@@ -125,7 +125,7 @@ function parseJsonFile( $filePath )
   if( json_last_error() !== JSON_ERROR_NONE )
     throw new Exception("Invalid JSON file: " . json_last_error_msg());
   
-  // Handle string keys for records by adding an id field
+  // Add string keys of records as id field (if any)
   
   $result = [];
   
@@ -154,7 +154,7 @@ function parseYamlFile( $filePath )
 {
   $data = Yaml::parseFile($filePath);
   
-  // Handle string keys for records by adding an id field
+  // Add string keys of records as id field (if any)
 
   $result = [];
   
