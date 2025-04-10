@@ -19,7 +19,7 @@ composer install
 
 ```
 index_style.php?source=data/sample.csv
-index.php?source=data/sample.csv
+index.php?source=data/sample.csv        # BS 5.3
 
 index_style.php?source=data/sample.json
 index.php?source=data/sample.json
