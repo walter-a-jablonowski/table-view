@@ -29,6 +29,10 @@ index.php?source=data/sample.tsv
 
 index_style.php?source=data/sample.yml
 index.php?source=data/sample.yml
+
+# Cols in table
+
+index.php?source=data/login.yml&cols=ID|User|PswdHint|Device
 ```
 
 ## License
