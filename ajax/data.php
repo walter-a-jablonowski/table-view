@@ -1,11 +1,9 @@
 <?php
 /**
- * Data handler for Table View Component
  * Loads data from various file formats
  */
 
-// Include helper functions
-require_once 'helpers.php';
+require_once 'lib/helpers.php';
 
 // Check if source parameter is provided
 if( ! isset($_GET['source']) ) 

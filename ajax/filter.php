@@ -1,11 +1,9 @@
 <?php
 /**
- * Filter handler for Table View Component
  * Filters data based on text input
  */
 
-// Include helper functions
-require_once 'helpers.php';
+require_once 'lib/helpers.php';
 
 // Check if source parameter is provided
 if( ! isset($_GET['source']) ) 

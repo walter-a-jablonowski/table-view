@@ -1,11 +1,9 @@
 <?php
 /**
- * Sort handler for Table View Component
  * Sorts data based on column and direction
  */
 
-// Include helper functions
-require_once 'helpers.php';
+require_once 'lib/helpers.php';
 
 // Check if source parameter is provided
 if( ! isset($_GET['source']) ) 
