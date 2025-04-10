@@ -6,10 +6,10 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Initialize table view
   const tableView = new TableView({
-    container: 'table-view',
+    container:      'table-view',
     recordsPerPage: 100,
-    columns: null,  // Will use first 5 columns by default
-    style: 'default'
+    columns:        null,      // will use first 5 columns by default
+    style:          'default'
   });
   
   // Connect table view with detail view
