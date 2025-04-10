@@ -125,22 +125,70 @@ function parseJsonFile( $filePath )
   if( json_last_error() !== JSON_ERROR_NONE )
     throw new Exception("Invalid JSON file: " . json_last_error_msg());
   
-  // Add string keys of records as id field (if any)
+  $result    = [];
+  $allFields = [];
   
-  $result = [];
+  // Check if data is an associative array (string keys)
+  $isAssociative = array_keys($data) !== range(0, count($data) - 1);
   
-  // check if data is an associative array (string keys)
-  if( array_keys($data) !== range(0, count($data) - 1))
+  // Collect all possible fields across all records (optional fields may be left out in data)
+
+  if( $isAssociative )
   {
     foreach( $data as $key => $value ) {
+      if( is_array($value) )
+        foreach( array_keys($value) as $field )
+          $allFields[$field] = true;
+    }
+    $allFields['id'] = true;
+  }
+  else
+  {
+    foreach( $data as $record ) {
+      if( is_array($record) )
+        foreach( array_keys($record) as $field )
+          $allFields[$field] = true;
+    }
+  }
+  
+  $allFields = array_keys($allFields);
+  
+  // Ensure all records have all fields
+
+  if( $isAssociative )
+  {
+    foreach( $data as $key => $value )
+    {
       if( is_array($value) ) {
-        $value['id'] = $key;
-        $result[] = $value;
+        $record = [];
+        // initialize all fields with null
+        foreach( $allFields as $field )
+          $record[$field] = null;
+        // fill in the values that exist
+        foreach( $value as $field => $fieldValue )
+          $record[$field] = $fieldValue;
+        // add the key as id
+        $record['id'] = $key;
+        $result[] = $record;
       }
     }
   }
   else
-    $result = $data;
+  {
+    foreach( $data as $record )
+    {
+      if( is_array($record) ) {
+        $normalizedRecord = [];
+        // initialize all fields with null
+        foreach( $allFields as $field )
+          $normalizedRecord[$field] = null;
+        // fill in the values that exist
+        foreach( $record as $field => $value )
+          $normalizedRecord[$field] = $value;
+        $result[] = $normalizedRecord;
+      }
+    }
+  }
   
   return $result;
 }
@@ -154,22 +202,70 @@ function parseYamlFile( $filePath )
 {
   $data = Yaml::parseFile($filePath);
   
-  // Add string keys of records as id field (if any)
-
-  $result = [];
+  $result    = [];
+  $allFields = [];
   
-  // check if data is an associative array (string keys)
-  if( array_keys($data) !== range(0, count($data) - 1) )
+  // Check if data is an associative array (string keys)
+  $isAssociative = array_keys($data) !== range(0, count($data) - 1);
+  
+  // Collect all possible fields across all records (optional fields may be left out in data)
+  
+  if( $isAssociative )
   {
     foreach( $data as $key => $value ) {
+      if( is_array($value) )
+        foreach( array_keys($value) as $field )
+          $allFields[$field] = true;
+    }
+    $allFields['id'] = true;
+  }
+  else
+  {
+    foreach( $data as $record ) {
+      if( is_array($record) )
+        foreach( array_keys($record) as $field )
+          $allFields[$field] = true;
+    }
+  }
+  
+  $allFields = array_keys($allFields);
+  
+  // Ensure all records have all fields
+
+  if( $isAssociative )
+  {
+    foreach( $data as $key => $value )
+    {
       if( is_array($value) ) {
-        $value['id'] = $key;
-        $result[] = $value;
+        $record = [];
+        // initialize all fields with null
+        foreach( $allFields as $field )
+          $record[$field] = null;
+        // fill in the values that exist
+        foreach( $value as $field => $fieldValue )
+          $record[$field] = $fieldValue;
+        // add the key as id
+        $record['id'] = $key;
+        $result[] = $record;
       }
     }
   }
   else
-    $result = $data;
+  {
+    foreach( $data as $record )
+    {
+      if( is_array($record) ) {
+        $normalizedRecord = [];
+        // initialize all fields with null
+        foreach( $allFields as $field )
+          $normalizedRecord[$field] = null;
+        // fill in the values that exist
+        foreach( $record as $field => $value )
+          $normalizedRecord[$field] = $value;
+        $result[] = $normalizedRecord;
+      }
+    }
+  }
   
   return $result;
 }

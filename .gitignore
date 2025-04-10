@@ -2,3 +2,4 @@ desktop.ini
 composer.lock
 vendor/
 table-view.code-workspace
+data/login.yml
