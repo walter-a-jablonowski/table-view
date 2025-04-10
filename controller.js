@@ -4,11 +4,22 @@ document.addEventListener('DOMContentLoaded', function() {
     container: 'detail-view'
   });
   
+  // Get columns from URL parameter
+  function getColumnsFromUrl() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const colsParam = urlParams.get('cols');
+    
+    if( colsParam )
+      return colsParam.split('|');  // split by pipe character and return as array
+    
+    return null; // Return null to use default behavior (first 5 columns)
+  }
+  
   // Initialize table view
   const tableView = new TableView({
     container:      'table-view',
     recordsPerPage: 100,
-    columns:        null,      // will use first 5 columns by default
+    columns:        getColumnsFromUrl(),      // Use columns from URL or default
     style:          'default'
   });
   
