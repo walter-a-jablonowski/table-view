@@ -38,7 +38,7 @@ body {
 
 /* Header - fixed to the top */
 header {
-  background-color: var(--secondary-color);
+  background: linear-gradient(135deg, #ee5a24 0%, #ff6b6b 100%);
   color: white;
   padding: 1rem;
   position: fixed;
@@ -46,7 +46,7 @@ header {
   left: 0;
   right: 0;
   z-index: 100;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .header-content {
