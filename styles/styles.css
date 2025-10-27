@@ -40,7 +40,7 @@ body {
 header {
   background: linear-gradient(135deg, #ee5a24 0%, #ff6b6b 100%);
   color: white;
-  padding: 1rem;
+  padding: 0.5rem 1rem;
   position: fixed;
   top: 0;
   left: 0;
@@ -89,8 +89,8 @@ header p {
 .container {
   display: flex;
   width: 100%;
-  height: calc(100vh - 60px); /* Adjust based on header height */
-  margin-top: 60px; /* Same as header height */
+  height: calc(100vh - 48px); /* Adjust based on header height */
+  margin-top: 48px; /* Same as header height */
   overflow: hidden;
 }
 
@@ -218,7 +218,7 @@ header p {
 @media (max-width: 576px) {
   .container {
     flex-direction: column;
-    height: calc(100vh - 60px);
+    height: calc(100vh - 48px);
   }
   
   .table-section {
@@ -234,13 +234,13 @@ header p {
   
   .detail-container.mobile-view {
     position: fixed;
-    top: 60px; /* Adjust based on header height */
+    top: 48px; /* Adjust based on header height */
     left: 0;
     right: 0;
     bottom: 0;
     z-index: 1000;
     display: none;
-    height: calc(100vh - 60px);
+    height: calc(100vh - 48px);
     width: 100%;
   }
   
