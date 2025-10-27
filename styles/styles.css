@@ -268,4 +268,15 @@ header p {
   .detail-container {
     width: 250px;
   }
+  
+  .detail-close {
+    display: none;
+  }
+}
+
+/* Large devices (desktops, 769px and up) */
+@media (min-width: 769px) {
+  .detail-close {
+    display: none;
+  }
 }
