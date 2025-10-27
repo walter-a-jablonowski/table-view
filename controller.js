@@ -61,7 +61,10 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Hide filter and load more elements as they're not needed
     document.getElementById('filter-button').parentElement.style.display = 'none';
-    document.getElementById('load-more-button').style.display = 'none';
+    const loadMoreButton = document.getElementById('load-more-button');
+    if( loadMoreButton ) {
+      loadMoreButton.style.display = 'none';
+    }
   }
   
   // Setup filter button

@@ -121,9 +121,15 @@ body {
     padding: 0.5rem;
   }
   
+  /* Hide the detail sidebar on mobile */
   .col-md-4 {
-    padding-left: 0.5rem !important;
-    margin-top: 0.5rem;
+    display: none !important;
+  }
+  
+  /* Make table section full width on mobile */
+  .col-md-8 {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
   }
   
   .detail-container {
