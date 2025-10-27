@@ -80,7 +80,7 @@ body {
 }
 
 .detail-label {
-  font-weight: 600;
+  font-weight: bold;
   font-size: 0.875rem;
   color: var(--bs-secondary);
   margin-bottom: 0.25rem;
