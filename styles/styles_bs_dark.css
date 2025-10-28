@@ -166,3 +166,29 @@ body[data-bs-theme="dark"] {
     border-top-color: var(--dark-orange-primary) !important;
   }
 }
+
+@media (max-width: 576px) {
+  .table-cell {
+    border-bottom: none !important;
+  }
+  
+  /* Ensure dark theme table-cell borders are removed on mobile */
+  [data-bs-theme="dark"] .table-cell {
+    border-bottom: none !important;
+  }
+  
+  /* Add visible row separators for dark theme mobile */
+  [data-bs-theme="dark"] .table-row {
+    border-bottom: 1px solid var(--dark-border) !important;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Ensure proper text colors for mobile dark theme */
+  [data-bs-theme="dark"] .table-cell {
+    color: var(--dark-text-primary) !important;
+  }
+  
+  [data-bs-theme="dark"] .table-cell::before {
+    color: var(--dark-text-secondary) !important;
+  }
+}

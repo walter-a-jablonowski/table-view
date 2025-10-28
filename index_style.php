@@ -9,7 +9,7 @@ $theme = isset($_GET['theme']) && $_GET['theme'] === 'black' ? 'black' : 'light'
   <title>Table View Component</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
   <link rel="stylesheet" href="styles/styles.css?v=<?= time() ?>">
-  <?php if ($theme === 'black'): ?>
+  <?php if( $theme === 'black'): ?>
     <link rel="stylesheet" href="styles/styles_dark.css?v=<?= time() ?>">
   <?php endif; ?>
   <link rel="stylesheet" href="table-view/styles.css?v=<?= time() ?>">
