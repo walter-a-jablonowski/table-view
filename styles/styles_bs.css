@@ -4,7 +4,8 @@
  */
 
 :root {
-  --bs-primary: #0d6efd;
+  --bs-primary: #ff6b35;
+  --bs-primary-rgb: 255, 107, 53;
   --bs-secondary: #6c757d;
   --bs-success: #198754;
   --bs-info: #0dcaf0;
