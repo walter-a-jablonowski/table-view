@@ -1,0 +1,145 @@
+/* 
+ * Dark Theme Styles for Bootstrap Version
+ * Additional styles to enhance Bootstrap's built-in dark theme
+ */
+
+:root[data-bs-theme="dark"] {
+  /* Enhanced dark theme variables */
+  --bs-primary: #0d6efd;
+  --bs-secondary: #6c757d;
+  --bs-success: #198754;
+  --bs-info: #0dcaf0;
+  --bs-warning: #ffc107;
+  --bs-danger: #dc3545;
+  --bs-light: #212529;
+  --bs-dark: #f8f9fa;
+  --bs-border-color: #495057;
+  --bs-body-bg: #121212;
+  --bs-body-color: #e9ecef;
+  
+  /* Custom dark theme colors */
+  --dark-bg-primary: #1a1a1a;
+  --dark-bg-secondary: #2d2d2d;
+  --dark-bg-tertiary: #3a3a3a;
+  --dark-text-primary: #ffffff;
+  --dark-text-secondary: #b0b0b0;
+  --dark-border: #404040;
+}
+
+/* Body and main background */
+body[data-bs-theme="dark"] {
+  background-color: var(--dark-bg-primary) !important;
+  color: var(--dark-text-primary) !important;
+}
+
+/* Navbar dark theme */
+.navbar-dark[data-bs-theme="dark"] {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%) !important;
+}
+
+/* Card dark theme */
+.card[data-bs-theme="dark"] {
+  background-color: var(--dark-bg-secondary) !important;
+  border-color: var(--dark-border) !important;
+}
+
+.card-header[data-bs-theme="dark"] {
+  background-color: var(--dark-bg-tertiary) !important;
+  border-bottom-color: var(--dark-border) !important;
+}
+
+/* Form controls dark theme */
+.form-control[data-bs-theme="dark"] {
+  background-color: var(--dark-bg-tertiary) !important;
+  border-color: var(--dark-border) !important;
+  color: var(--dark-text-primary) !important;
+}
+
+.form-control[data-bs-theme="dark"]:focus {
+  background-color: var(--dark-bg-tertiary) !important;
+  border-color: var(--bs-primary) !important;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25) !important;
+}
+
+.form-control[data-bs-theme="dark"]::placeholder {
+  color: var(--dark-text-secondary) !important;
+}
+
+/* Button dark theme */
+.btn-outline-secondary[data-bs-theme="dark"] {
+  color: var(--dark-text-primary) !important;
+  border-color: var(--dark-border) !important;
+}
+
+.btn-outline-secondary[data-bs-theme="dark"]:hover {
+  background-color: var(--dark-bg-tertiary) !important;
+  border-color: var(--dark-border) !important;
+  color: var(--dark-text-primary) !important;
+}
+
+/* Detail container dark theme */
+.detail-container[data-bs-theme="dark"] {
+  background-color: var(--dark-bg-secondary) !important;
+  border-left-color: var(--dark-border) !important;
+}
+
+.detail-header[data-bs-theme="dark"] {
+  background-color: var(--dark-bg-tertiary) !important;
+  border-bottom-color: var(--dark-border) !important;
+}
+
+.detail-header h5[data-bs-theme="dark"] {
+  color: var(--dark-text-primary) !important;
+}
+
+.detail-content[data-bs-theme="dark"] {
+  background-color: var(--dark-bg-secondary) !important;
+}
+
+.detail-label[data-bs-theme="dark"] {
+  color: var(--dark-text-secondary) !important;
+}
+
+.detail-value[data-bs-theme="dark"] {
+  color: var(--dark-text-primary) !important;
+}
+
+.no-record-selected[data-bs-theme="dark"] {
+  color: var(--dark-text-secondary) !important;
+}
+
+/* Modal dark theme */
+.modal-content[data-bs-theme="dark"] {
+  background-color: var(--dark-bg-secondary) !important;
+  border-color: var(--dark-border) !important;
+}
+
+.modal-header[data-bs-theme="dark"] {
+  border-bottom-color: var(--dark-border) !important;
+}
+
+.modal-footer[data-bs-theme="dark"] {
+  border-top-color: var(--dark-border) !important;
+}
+
+.modal-title[data-bs-theme="dark"] {
+  color: var(--dark-text-primary) !important;
+}
+
+/* Button close dark theme */
+.btn-close[data-bs-theme="dark"] {
+  filter: invert(1) grayscale(100%) brightness(200%);
+}
+
+/* Table specific dark theme styles */
+.table-container[data-bs-theme="dark"] {
+  background-color: var(--dark-bg-secondary) !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767.98px) {
+  .detail-container.mobile-view[data-bs-theme="dark"] {
+    background-color: var(--dark-bg-primary) !important;
+    border-top-color: var(--dark-border) !important;
+  }
+}

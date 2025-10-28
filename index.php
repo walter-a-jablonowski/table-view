@@ -1,5 +1,8 @@
+<?php
+$theme = isset($_GET['theme']) && $_GET['theme'] === 'black' ? 'dark' : 'light';
+?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="<?= $theme ?>">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,11 +13,19 @@
   <!-- Bootstrap Compatibility Layer -->
   <link rel="stylesheet" href="table-view/bootstrap-compat.css?v=<?= time() ?>">
   <link rel="stylesheet" href="styles/styles_bs.css?v=<?= time() ?>">
+  <?php if ($theme === 'dark'): ?>
+    <link rel="stylesheet" href="styles/styles_bs_dark.css?v=<?= time() ?>">
+  <?php endif; ?>
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">Table View</a>
+      <div class="navbar-nav ms-auto">
+        <button class="btn btn-outline-light btn-sm" id="theme-toggle" onclick="toggleTheme()">
+          <i class="bi bi-moon-fill" id="theme-icon"></i>
+        </button>
+      </div>
     </div>
   </nav>
 
@@ -72,5 +83,43 @@
   <script src="table-view/detail.js?v=<?= time() ?>"></script>
   <script src="table-view/table.js?v=<?= time() ?>"></script>
   <script src="controller.js?v=<?= time() ?>"></script>
+  
+  <script>
+    // Bootstrap's built-in theme toggle functionality
+    function toggleTheme() {
+      const htmlElement = document.documentElement;
+      const themeIcon = document.getElementById('theme-icon');
+      const currentTheme = htmlElement.getAttribute('data-bs-theme');
+      
+      if (currentTheme === 'dark') {
+        htmlElement.setAttribute('data-bs-theme', 'light');
+        themeIcon.className = 'bi bi-moon-fill';
+        // Update URL without page reload
+        const url = new URL(window.location);
+        url.searchParams.delete('theme');
+        window.history.replaceState({}, '', url);
+      } else {
+        htmlElement.setAttribute('data-bs-theme', 'dark');
+        themeIcon.className = 'bi bi-sun-fill';
+        // Update URL without page reload
+        const url = new URL(window.location);
+        url.searchParams.set('theme', 'black');
+        window.history.replaceState({}, '', url);
+      }
+    }
+    
+    // Set initial icon based on current theme
+    document.addEventListener('DOMContentLoaded', function() {
+      const htmlElement = document.documentElement;
+      const themeIcon = document.getElementById('theme-icon');
+      const currentTheme = htmlElement.getAttribute('data-bs-theme');
+      
+      if (currentTheme === 'dark') {
+        themeIcon.className = 'bi bi-sun-fill';
+      } else {
+        themeIcon.className = 'bi bi-moon-fill';
+      }
+    });
+  </script>
 </body>
 </html>

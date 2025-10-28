@@ -3,6 +3,38 @@
  * Custom implementation without third-party libraries
  */
 
+/* CSS Variables for theming */
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #2c3e50;
+  --accent-color: #e74c3c;
+  --light-color: #ecf0f1;
+  --dark-color: #34495e;
+  --border-color: #bdc3c7;
+  --success-color: #2ecc71;
+  --warning-color: #f39c12;
+  --error-color: #e74c3c;
+  --bg-color: #ffffff;
+  --text-color: #2c3e50;
+  --hover-color: #f5f7fa;
+}
+
+/* Dark theme variables */
+:root[data-bs-theme="dark"] {
+  --primary-color: #0d6efd;
+  --secondary-color: #6c757d;
+  --accent-color: #dc3545;
+  --light-color: #2d2d2d;
+  --dark-color: #e9ecef;
+  --border-color: #495057;
+  --success-color: #198754;
+  --warning-color: #ffc107;
+  --error-color: #dc3545;
+  --bg-color: #1a1a1a;
+  --text-color: #ffffff;
+  --hover-color: #3a3a3a;
+}
+
 /* Table container */
 .table-container {
   width: 100%;
@@ -10,6 +42,8 @@
   height: 100%;
   min-height: 200px;
   margin-bottom: 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
 
 /* Table styles */
@@ -20,7 +54,7 @@
 }
 
 .table-row:hover {
-  background-color: #f5f7fa;
+  background-color: var(--hover-color);
   cursor: pointer;
 }
 
@@ -134,12 +168,13 @@
 /* Detail container */
 .detail-container {
   width: 300px;
-  background-color: white;
+  background-color: var(--bg-color);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   height: 100%;
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  color: var(--text-color);
 }
 
 .detail-header {
@@ -149,8 +184,9 @@
   padding: 1rem;
   border-bottom: 1px solid var(--border-color);
   margin-bottom: 0;
-  background-color: white;
+  background-color: var(--light-color);
   z-index: 5;
+  color: var(--text-color);
 }
 
 .detail-header h2 {
