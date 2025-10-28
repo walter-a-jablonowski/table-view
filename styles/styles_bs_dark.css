@@ -1,11 +1,14 @@
 /* 
  * Dark Theme Styles for Bootstrap Version
- * Additional styles to enhance Bootstrap's built-in dark theme
+ * Custom styles for application-specific components
  */
 
 :root[data-bs-theme="dark"] {
+  /* Orange primary color theme */
+  --bs-primary: #ff6b35;
+  --bs-primary-rgb: 255, 107, 53;
+  
   /* Enhanced dark theme variables */
-  --bs-primary: #0d6efd;
   --bs-secondary: #6c757d;
   --bs-success: #198754;
   --bs-info: #0dcaf0;
@@ -24,6 +27,8 @@
   --dark-text-primary: #ffffff;
   --dark-text-secondary: #b0b0b0;
   --dark-border: #404040;
+  --dark-orange-primary: #ff6b35;
+  --dark-orange-hover: #e55a2b;
 }
 
 /* Body and main background */
@@ -35,6 +40,18 @@ body[data-bs-theme="dark"] {
 /* Navbar dark theme */
 .navbar-dark[data-bs-theme="dark"] {
   background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%) !important;
+}
+
+/* Orange theme button in navbar */
+.navbar-dark[data-bs-theme="dark"] .btn-outline-light {
+  border-color: var(--dark-orange-primary) !important;
+  color: var(--dark-orange-primary) !important;
+}
+
+.navbar-dark[data-bs-theme="dark"] .btn-outline-light:hover {
+  background-color: var(--dark-orange-primary) !important;
+  border-color: var(--dark-orange-primary) !important;
+  color: #ffffff !important;
 }
 
 /* Card dark theme */
@@ -80,7 +97,7 @@ body[data-bs-theme="dark"] {
 /* Detail container dark theme */
 .detail-container[data-bs-theme="dark"] {
   background-color: var(--dark-bg-secondary) !important;
-  border-left-color: var(--dark-border) !important;
+  border-left-color: var(--dark-orange-primary) !important;
 }
 
 .detail-header[data-bs-theme="dark"] {
@@ -136,10 +153,16 @@ body[data-bs-theme="dark"] {
   background-color: var(--dark-bg-secondary) !important;
 }
 
+/* Orange accent for sorted columns */
+.table-cell.sorted-asc[data-bs-theme="dark"]::after,
+.table-cell.sorted-desc[data-bs-theme="dark"]::after {
+  color: var(--dark-orange-primary) !important;
+}
+
 /* Responsive adjustments */
 @media (max-width: 767.98px) {
   .detail-container.mobile-view[data-bs-theme="dark"] {
     background-color: var(--dark-bg-primary) !important;
-    border-top-color: var(--dark-border) !important;
+    border-top-color: var(--dark-orange-primary) !important;
   }
 }
