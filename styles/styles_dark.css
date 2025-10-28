@@ -1,0 +1,229 @@
+/* 
+ * Dark Theme Styles for Custom Styles Version
+ * Applied when data-theme="black" is set on the html element
+ * Only affects content area, not the header
+ */
+
+[data-theme="black"] {
+  /* Dark theme color variables */
+  --primary-color: #ff6b35;
+  --secondary-color: #2c3e50;
+  --accent-color: #e74c3c;
+  --light-color: #2c3e50;
+  --dark-color: #e2e8f0;
+  --border-color: #4a5568;
+  --success-color: #48bb78;
+  --warning-color: #ed8936;
+  --error-color: #f56565;
+  
+  /* Background and text colors */
+  --bg-primary: #1a202c;
+  --bg-secondary: #2d3748;
+  --bg-tertiary: #374151;
+  --text-primary: #f7fafc;
+  --text-secondary: #e2e8f0;
+  --text-muted: #a0aec0;
+}
+
+/* Body background */
+[data-theme="black"] body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+/* Container */
+[data-theme="black"] .container {
+  background-color: var(--bg-primary);
+}
+
+/* Table section */
+[data-theme="black"] .table-section {
+  background-color: var(--bg-secondary) !important;
+  color: var(--text-primary);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Table view container */
+[data-theme="black"] #table-view {
+  background-color: var(--bg-secondary) !important;
+}
+
+/* Data source selector */
+[data-theme="black"] .data-source-selector {
+  border-bottom-color: var(--border-color);
+}
+
+[data-theme="black"] .data-source-selector label {
+  color: var(--text-primary);
+}
+
+[data-theme="black"] .data-source-selector select {
+  background-color: var(--bg-tertiary);
+  border-color: var(--border-color);
+  color: var(--text-primary);
+}
+
+[data-theme="black"] .data-source-selector button {
+  background-color: var(--secondary-color);
+  color: var(--text-primary);
+}
+
+[data-theme="black"] .data-source-selector button:hover {
+  background-color: #243342;
+}
+
+/* Filter container */
+[data-theme="black"] .filter-container input {
+  background-color: var(--bg-tertiary);
+  border-color: var(--border-color);
+  color: var(--text-primary);
+}
+
+[data-theme="black"] .filter-container input::placeholder {
+  color: var(--text-muted);
+}
+
+[data-theme="black"] .filter-container input:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(255, 107, 53, 0.2);
+}
+
+[data-theme="black"] .filter-container button {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+[data-theme="black"] .filter-container button:hover {
+  background-color: #e55a2b;
+}
+
+/* Table styles */
+[data-theme="black"] table {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary) !important;
+}
+
+[data-theme="black"] th {
+  background-color: var(--bg-tertiary);
+  color: var(--text-primary) !important;
+  border-bottom-color: var(--border-color);
+}
+
+[data-theme="black"] td {
+  border-bottom-color: var(--border-color);
+  color: var(--text-primary) !important;
+}
+
+[data-theme="black"] tr:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+[data-theme="black"] tr:hover {
+  background-color: rgba(255, 107, 53, 0.1) !important;
+}
+
+[data-theme="black"] tr:hover td {
+  color: var(--text-primary) !important;
+}
+
+/* Table view component styles */
+[data-theme="black"] .table-container {
+  background-color: var(--bg-secondary) !important;
+  color: var(--text-primary) !important;
+}
+
+[data-theme="black"] .table-header {
+  background-color: var(--bg-tertiary) !important;
+  color: var(--text-primary) !important;
+}
+
+[data-theme="black"] .table-row {
+  color: var(--text-primary) !important;
+  border-bottom-color: var(--border-color);
+}
+
+[data-theme="black"] .table-row:hover {
+  background-color: rgba(255, 107, 53, 0.1) !important;
+  color: var(--text-primary) !important;
+}
+
+[data-theme="black"] .table-cell {
+  color: var(--text-primary) !important;
+  border-color: var(--border-color);
+}
+
+/* Detail container */
+[data-theme="black"] .detail-container {
+  background-color: var(--bg-secondary) !important;
+  color: var(--text-primary);
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="black"] .detail-header {
+  border-bottom-color: var(--border-color);
+  background-color: var(--bg-tertiary) !important;
+}
+
+[data-theme="black"] .detail-header h2 {
+  color: var(--text-primary) !important;
+}
+
+[data-theme="black"] .detail-content {
+  color: var(--text-primary) !important;
+}
+
+/* Detail view labels and values */
+[data-theme="black"] .detail-item {
+  color: var(--text-primary);
+}
+
+[data-theme="black"] .detail-label {
+  color: var(--text-secondary) !important;
+  font-weight: bold;
+}
+
+[data-theme="black"] .detail-value {
+  color: var(--text-primary) !important;
+}
+
+[data-theme="black"] .no-record-selected {
+  color: var(--text-muted) !important;
+}
+
+/* Error message */
+[data-theme="black"] .error-message {
+  background-color: #2d1b1b;
+  color: #f56565;
+  border-color: #4a2626;
+}
+
+/* Theme toggle button (keep existing styles) */
+[data-theme="black"] .theme-toggle {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+[data-theme="black"] .theme-toggle:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Scrollbar styles */
+[data-theme="black"] ::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+[data-theme="black"] ::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+[data-theme="black"] ::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
+}
+
+[data-theme="black"] ::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
