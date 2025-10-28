@@ -227,3 +227,26 @@
 [data-theme="black"] ::-webkit-scrollbar-thumb:hover {
   background: var(--text-muted);
 }
+
+/* Mobile responsive styles for dark theme */
+@media (max-width: 576px) {
+  /* Remove table-cell borders in mobile view for dark theme */
+  [data-theme="black"] .table-cell {
+    border-bottom: none !important;
+  }
+  
+  /* Add visible row separators for dark theme mobile */
+  [data-theme="black"] .table-row {
+    border-bottom: 1px solid var(--border-color) !important;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Ensure proper text colors for mobile dark theme */
+  [data-theme="black"] .table-cell {
+    color: var(--text-primary) !important;
+  }
+  
+  [data-theme="black"] .table-cell::before {
+    color: var(--text-muted) !important;
+  }
+}
