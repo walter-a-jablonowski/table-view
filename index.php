@@ -1,5 +1,7 @@
 <?php
+
 $theme = isset($_GET['theme']) && $_GET['theme'] === 'black' ? 'dark' : 'light';
+
 ?>
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="<?= $theme ?>">
